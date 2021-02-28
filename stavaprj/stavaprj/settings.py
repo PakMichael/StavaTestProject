@@ -119,3 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# GeoDistance
+GEO_ENDPOINT="http://64.227.65.68:3006/route?origin=50.0,18.1&destination=50.2,18.3"
+GEO_USERNAME = "Cristoforo"
+GEO_PASSWORD = "Colombo"
