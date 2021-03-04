@@ -1,9 +1,10 @@
 from django.db import models
+from .managers import MapperManager
 
 
-# Create your models here.
+class MapperModel(models.Model):
+    objects = MapperManager()
 
-class Mapper(models.Model):
-    request_id = models.CharField(max_length=128, unique=True)
-    start_req_time = models.DateTimeField(null=True)
-    end_req_time = models.DateTimeField(null=True)
+    REQUEST_ID = models.CharField(max_length=128, unique=True)
+    exec_start = models.DateTimeField(null=True)
+    exec_end = models.DateTimeField(null=True)
