@@ -16,12 +16,20 @@ class DistanceSerializer(serializers.Serializer):
     def validate(self, data):
         validated_data = []
 
-        for line in json.loads(data['distance']):
+        data_json = None
+
+        try:
+            data_json = json.loads(data['distance'])
+        except Exception:
+            raise serializers.ValidationError("Error: {0} is not a valid json".format(data['distance']))
+
+        for line in data_json:
             for point in line:
                 coordinate(point)
-
-            validated_data += [(line[0], line[1])]
-
+            try:
+                validated_data += [(line[0], line[1])]
+            except Exception:
+                raise serializers.ValidationError("Error: {0} one out of two points is given".format(line))
         return validated_data
 
 
