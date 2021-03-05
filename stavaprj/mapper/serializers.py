@@ -23,7 +23,7 @@ class DistanceSerializer(serializers.Serializer):
         except Exception:
             raise serializers.ValidationError("Error: {0} is not a valid json".format(data['distance']))
 
-        for line in data_json:
+        for line in data_json[:50]:
             for point in line:
                 coordinate(point)
             try:
