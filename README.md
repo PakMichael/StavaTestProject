@@ -1,7 +1,7 @@
 # StavaTestProject
 
 #### Zadanie testowe polegające na opracowaniu web aplikacji opartej o Python Django wraz z Vue.js 
-
+![alt text](https://i.postimg.cc/5yFJCc0T/Screenshot-2021-03-05-stavafrontend-1.png)
 #### Punkt 1
 W celach podania punktów był stworzony frontend interfejs napisany w Vue.js.
 ##### Opis:
@@ -30,4 +30,4 @@ JSON.stringify([
 ])
 ```
 
-![alt text](https://i.postimg.cc/5yFJCc0T/Screenshot-2021-03-05-stavafrontend-1.png)
+
